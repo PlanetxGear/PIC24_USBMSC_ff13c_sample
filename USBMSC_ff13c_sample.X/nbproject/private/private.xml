@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="37">
+        <file>
+            <url>vUSBMSC.c</url>
+            <bookmark id="34">
+                <name/>
+                <line>332</line>
+                <key/>
+            </bookmark>
+            <bookmark id="32">
+                <name/>
+                <line>369</line>
+                <key/>
+            </bookmark>
+            <bookmark id="31">
+                <name/>
+                <line>392</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>vSCSI.c</url>
+            <bookmark id="36">
+                <name/>
+                <line>435</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>vUSBMSC.h</url>
+            <bookmark id="37">
+                <name/>
+                <line>155</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.c</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/main.c</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/v.h</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.c</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.h</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/mmc_discio4USB.c</file>
+            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.h</file>
+        </group>
+    </open-files>
+</project-private>
