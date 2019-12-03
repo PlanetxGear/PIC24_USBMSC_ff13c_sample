@@ -5,17 +5,17 @@
             <url>vUSBMSC.c</url>
             <bookmark id="34">
                 <name/>
-                <line>332</line>
+                <line>331</line>
                 <key/>
             </bookmark>
             <bookmark id="32">
                 <name/>
-                <line>369</line>
+                <line>368</line>
                 <key/>
             </bookmark>
             <bookmark id="31">
                 <name/>
-                <line>392</line>
+                <line>391</line>
                 <key/>
             </bookmark>
         </file>
@@ -38,13 +38,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.c</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/main.c</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/v.h</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.c</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.h</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/mmc_discio4USB.c</file>
-            <file>file:/D:/TEMP/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.h</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.c</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/v.h</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/main.c</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.c</file>
         </group>
     </open-files>
 </project-private>

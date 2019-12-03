@@ -13,7 +13,7 @@
 #define _V_DEBUG		// when it's debugging, define _V_DEBUG_USB1. 
 //#define _V_DEBUG_USB1		// when it's debugging, define _V_DEBUG_USB1. 
 //#define _V_DEBUG_SCSI1		// when it's debugging, define _V_DEBUG_SCSI1. 
-//#define _V_DEBUG_SCSI2		// when it's debugging, define _V_DEBUG_SCSI2. 
+#define _V_DEBUG_SCSI2		// when it's debugging, define _V_DEBUG_SCSI2. 
 
 #ifdef _V_DEBUG
 	#define	DEBUG_PUTS(str1)	xputs(str1)

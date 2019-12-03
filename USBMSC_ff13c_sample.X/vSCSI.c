@@ -405,7 +405,7 @@ UINT32	sectorNo		// Sector address
 
     SCSI_command_go();
 	
-    DEBUG_SCSI2PRINTF("SOF END:%u=>%d \n", USBcondition.SOFCount,(USBcondition.SOFCount - USBcondition.SOFCountSt));
+    DEBUG_SCSI1PRINTF("SOF END:%u=>%d \n", USBcondition.SOFCount,(USBcondition.SOFCount - USBcondition.SOFCountSt));
     DEBUG_SCSI1PUTS("SCSI Read END\n");
 }
 
@@ -438,7 +438,7 @@ UINT32	sectorNo		// Sector address
 
     SCSI_command_go();
 	
-    DEBUG_SCSI2PRINTF("SOF END:%u=>%d \n", USBcondition.SOFCount,(USBcondition.SOFCount - USBcondition.SOFCountSt));
+    DEBUG_SCSI1PRINTF("SOF END:%u=>%d \n", USBcondition.SOFCount,(USBcondition.SOFCount - USBcondition.SOFCountSt));
     DEBUG_SCSI1PUTS("SCSI Read END\n");
 }
 

@@ -87,13 +87,12 @@ void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
         USBcondition.Status = eUSB_initRegister;
         DEBUG_PUTS("Detached1\n");	// Show detached message
     } 
-    else if(!U1IRbits.ATTACHIF)
-    {
-        USBcondition.Status = eUSB_ERR_ANY; // go to error handling, to printf U1EIR,U1IR,U1OTGIR.
-        IEC5bits.USB1IE = 0;	// USB interrupt disenable
-        //exit;
-        goto interrupt_end01;   // Don't use "return"
-    }
+//    else if(!U1IRbits.ATTACHIF)
+//    {
+//        USBcondition.Status = eUSB_ERR_ANY; // go to error handling, to printf U1EIR,U1IR,U1OTGIR.
+//        IEC5bits.USB1IE = 0;	// USB interrupt disenable
+//        goto interrupt_end01;   // Don't use "return"
+//    }
     
     // when you clearing interrupt flags, you should do it following order. 
     // U1EIR->U1IR->U1OTGIR->USB1IF
@@ -102,8 +101,8 @@ void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
     U1OTGIR = 0xff;         // Clear OTG status interrupt flag
 	IFS5bits.USB1IF = 0;	// Clear USB1 interrupt flag
     
-interrupt_end01:
-    Nop();      // you need "Nap" for label
+//interrupt_end01:
+//    Nop();      // you need "Nap" for label
    
 }
 

@@ -18,9 +18,9 @@ You can operat it by terminal with serial communication speed of 115,200 bps.
 
 ## Prerequisites
 I created this project using the free versions of the following tools:
- * [Microchip MPLAB X][1] (v5.20)
- * [Microchip MPLAB X Code Configurator][2] (v3.85)
- * [Microchip XC16 Compiler][4] (v1.36)
+ * [Microchip MPLAB X][1] (v5.30)
+ * [Microchip MPLAB X Code Configurator][2] (v3.85.1)
+ * [Microchip XC16 Compiler][4] (v1.416)
  * [KiCad][6] (v5.1.4)
  * [FatFs][7] (R0.13)
 
