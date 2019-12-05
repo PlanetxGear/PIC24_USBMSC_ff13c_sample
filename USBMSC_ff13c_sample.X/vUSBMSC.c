@@ -52,21 +52,16 @@ const UINT8 USBMSC_SetConfigCommand[] = {0x00, 0x09, 0x01, 0x00, 0x00, 0x00, 0x0
  * @param[out]	USBcondition.IsLowSpeed
  *   	
  */
-//void __attribute__((interrupt,auto_psv)) _USB1Interrupt()
-//void __attribute__((interrupt(auto_psv))) _USB1Interrupt(void)
 void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
 {
-//	IFS5bits.USB1IF = 0;	// Clear USB1 interrupt flag
 	if(U1IRbits.SOFIF)	// SOF interrupts? 
     {
-//		U1IRbits.SOFIF = 1;			// Clear SOFIE interrupt Flag bit
 		USBcondition.SOFCount++;	// Just increment SOF counter
     } 
     else if(U1IRbits.ATTACHIF && U1IEbits.ATTACHIE)	// Check attache flag 
     {
         U1IEbits.ATTACHIE = 0;	// Disable ATTACH interrupts
         U1IEbits.DETACHIE = 1;	// Enable DETACH interrupts
-//        U1IRbits.ATTACHIF = 1;	// Clear ATTACH interrupt Flag bit
         USBcondition.IsAttach = 1;	// Set attache flag
         USBcondition.Status = eUSB_AttachWait;
         if(!U1CONbits.JSTATE)	// Connected device is low speed?
@@ -82,17 +77,10 @@ void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
     {
         U1IEbits.ATTACHIE = 1;	// Disable ATTACH interrupts
         U1IEbits.DETACHIE = 0;	// Enable DETACH interrupts
-//        U1IRbits.DETACHIF = 1;	// Clear DETACH interrupt Flag bit
         USBcondition.IsAttach = 0;	// Set attache flag
         USBcondition.Status = eUSB_initRegister;
         DEBUG_PUTS("Detached1\n");	// Show detached message
     } 
-//    else if(!U1IRbits.ATTACHIF)
-//    {
-//        USBcondition.Status = eUSB_ERR_ANY; // go to error handling, to printf U1EIR,U1IR,U1OTGIR.
-//        IEC5bits.USB1IE = 0;	// USB interrupt disenable
-//        goto interrupt_end01;   // Don't use "return"
-//    }
     
     // when you clearing interrupt flags, you should do it following order. 
     // U1EIR->U1IR->U1OTGIR->USB1IF
@@ -101,9 +89,6 @@ void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
     U1OTGIR = 0xff;         // Clear OTG status interrupt flag
 	IFS5bits.USB1IF = 0;	// Clear USB1 interrupt flag
     
-//interrupt_end01:
-//    Nop();      // you need "Nap" for label
-   
 }
 
 //******************************************************************************
@@ -113,13 +98,13 @@ void __attribute__((__interrupt__,no_auto_psv)) _USB1Interrupt(void)
  */
 void USBMSC_initRegisters(void)
 {
-    DEBUG_USB1PUTS("eUSB_init\n");
+    DEBUG_USB1PUTS("USBMSC_initRegisters\n");
 	USBcondition.IsAttach = 0;	// Clear attach flag
 	USBcondition.IsLowSpeed = 0;	// Reset USB bus speed
 	memset((void*)BDT, 0, 8);	// Clear BDT tables
-//	BDT_IN.ADR = (UINT16)UsbBufDAT512;	// Setup IN BD buffer address (max 64 bytes)
-	BDT_IN.ADR = (UINT16)UsbBufCMD64;	// Setup IN BD buffer address (max 64 bytes)
-	BDT_OUT.ADR = (UINT16)UsbBufCMD64;	// Setup SETUP/OUT BD buffer address (max 64 bytes)
+//	BDT_IN.ADR = (UINT16)UsbBufDAT512;	// UsbBufDAT512 is data buffer
+	BDT_IN.ADR = (UINT16)UsbBufCMD64;	// Setup IN BD buffer address (max 64 bytes). *Command buffer.
+	BDT_OUT.ADR = (UINT16)UsbBufCMD64;	// Setup SETUP/OUT BD buffer address (max 64 bytes) *Command buffer.
 	EP0_DATA01 = 0;		//set DATA0/1 bits, at first = DATA0 
 	EP1_DATA01 = 0;		//set DATA0/1 bits, at first = DATA0
 	EP2_DATA01 = 0;		//set DATA0/1 bits, at first = DATA0
@@ -199,7 +184,7 @@ enum eUSB_STATE eUSBMSC_checkTransactionReturn(BDT_ENTRY *pBDT)
     if(U1IRbits.UERRIF)	// Check error bit 
     {
 		USBcondition.Status = eUSB_ERR_ANY;	// ERROR Return
-        DEBUG_PRINTF( "USB_ANY_ERROR. U1EIR:0x%x\n", U1EIR);
+        DEBUG_PRINTF( "USB_ERR_ANY. U1EIR:0x%x\n", U1EIR);
         return USBcondition.Status;
     }
 // Handle data
@@ -411,7 +396,6 @@ void USBMSC_statusControl(void)
 
     ////////////////////////////////////////////////////////////////////////////
 	case  	eUSB_IDLE:
-//	case	eUSB_END:
 		break;
 
     ////////////////////////////////////////////////////////////////////////////
@@ -424,6 +408,7 @@ void USBMSC_statusControl(void)
     case	eUSB_ERR_UnknownPID:	
 		break;
 	case	eUSB_ERR_ANY:	
+    	IEC5bits.USB1IE = 0;	// stop USB interrupt
         USBcondition.Status = eUSB_ERR_END;
         xputs("USB_ERR_ANY\n");	// Show Error message
         xprintf( "U1OTGIR:0x%x\n", U1OTGIR);

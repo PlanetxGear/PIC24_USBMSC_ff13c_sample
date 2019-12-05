@@ -17,10 +17,6 @@
 
 //    static volatile
 volatile unsigned int uiTMR001;             // used for USB status
-volatile unsigned int uiTMR002, uiTMR003;   // used for FatFs
-volatile unsigned int uiTMR004;             // used for Switch checking
-volatile unsigned int uiTMR005;             // not use  xxxx used for wave task
-volatile unsigned int uiTMR006;             // used for I2C wait of Lcdtask11
 volatile unsigned int uiTMR007;             // used for LED Blink
 
 
@@ -33,11 +29,6 @@ volatile unsigned int uiTMR007;             // used for LED Blink
 void Intrrupt_TMR1(void)
 {
 	if (uiTMR001 > 0) --uiTMR001; // 1000Hz decrement timer with zero stopped
-	if (uiTMR002 > 0) --uiTMR002; // 1000Hz decrement timer with zero stopped
-	if (uiTMR003 > 0) --uiTMR003; // 1000Hz decrement timer with zero stopped
-	if (uiTMR004 > 0) --uiTMR004; // 1000Hz decrement timer with zero stopped
-	if (uiTMR005 > 0) --uiTMR005; // 1000Hz decrement timer with zero stopped
-	if (uiTMR006 > 0) --uiTMR006; // 1000Hz decrement timer with zero stopped
 	if (uiTMR007 > 0) --uiTMR007; // 1000Hz decrement timer with zero stopped
 
     ff13_T1Interrupt(); //from ff13 sample 20191112
@@ -46,11 +37,6 @@ void Intrrupt_TMR1(void)
 void vTMR1_init(void)
 {
     uiTMR001 = 0;
-    uiTMR002 = 0;
-    uiTMR003 = 0;
-    uiTMR004 = 0;
-    uiTMR005 = 0;
-    uiTMR006 = 0;
     uiTMR007 = 0;
 }
 

@@ -83,7 +83,7 @@ void SCSI_init(void)
  * @param[in]	USBcondition.Status     is used in vUSBMSC.c.
  * @param[out]	SCSIcondition.Status    is used this module.
  * @details
- * check the Status of ehe execution result of the USBMSC transakution.
+ * check the Status of ehe execution result of the USBMSC transaction.
  * if successful, return to the next step status, 
  * otherwise return the Error status.
  *   	
@@ -111,7 +111,7 @@ void SCSI_checkTransactionReturn(void)
 /**	
  * @brief	Set sector number into SCSI read/write command contents.
  * @param[in]	secterNumber    is used in vUSBMSC.c.
- * @param[out]	buf             is inclueded SCSI command.
+ * @param[out]	buf             is included SCSI command.
  * @details
  * Set sector number into SCSI command contents.
  * SCSI command sequence is "big endian", so it is necessary to change the order.
@@ -131,9 +131,9 @@ void SetSector(UINT32 secterNumber, UINT8 buf[])
  * @brief   check CSW phrase.
  * @return      eSCSI_STATE
  * @param[in]   dataSize    is CSW data size.
- * @param[in]   buf[]       is command buffer, it's inclueded CSW return phrase.
+ * @param[in]   buf[]       is command buffer, it's included CSW return phrase.
  * @details
- * check CSW return phrase, wheter it is correct or not.
+ * check CSW return phrase, whether it is correct or not.
  *   	
  */
 enum eSCSI_STATE SCSI_isErrInCSW(INT16 dataSize, UINT8 buf[])
@@ -275,7 +275,6 @@ void SCSI_statusControl(void)
 
 	////////////////////////////////////////////////////////////////////////////
 	case	eSCSI_IDLE:
-//	case	eSCSI_END:
 		SCSIcondition.Command = 0;  // Clear
 		break;
 

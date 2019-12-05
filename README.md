@@ -1,19 +1,13 @@
-﻿# PIC24FJ64GB002 USB MSC Class Test Project.
+﻿# PIC24FJ64GB002 USB memory & FatFs sample Project.
 ---
 ## Description
 
-This is a simple USBMSC x [FatFs][7] sample Project with [PIC24FJ64GB002 micro controller][5] & [MPLAB.X][1] & [MCC][2].
+This is a USB memory & [FatFs][7] sample Project with [PIC24FJ64GB002 micro controller][5] & [MPLAB.X][1] & [MCC][2].
 I don't use [MLA][6](Microchip Livraries for Applications). I directly manipulate the USB registers.
 You can operat it by terminal with serial communication speed of 115,200 bps.
 
 ## Picture
-![Alt text](/Picture/20190822_IMG_2250.JPG)
-
-
-## References.
-<http://ww1.microchip.com/downloads/en/DeviceDoc/39721b.pdf>
-<http://ww1.microchip.com/downloads/jp/DeviceDoc/39721B_JP.pdf>
-<http://www.picfun.com/usb03.html>
+![Alt text](/Picture/WS001081_console.JPG)
 
 
 ## Prerequisites
@@ -30,8 +24,16 @@ I use the [Microchip MPLAB PICkit3 In-Circuit Debugger][3] to program the PIC an
 Also, I use the [KiCad][6] to draw the electric circuit schematic.
 
 
+## References.
+<http://elm-chan.org/fsw/ff/00index_e.html> 
+<http://ww1.microchip.com/downloads/en/DeviceDoc/39721b.pdf> 
+<http://ww1.microchip.com/downloads/jp/DeviceDoc/39721B_JP.pdf> 
+<http://www.picfun.com/usb03.html>
+
+
+
 ## Licence
-[MIT]<https://en.wikipedia.org/wiki/MIT_License> <https://ja.wikipedia.org/wiki/MIT_License>
+[MIT]<https://en.wikipedia.org/wiki/MIT_License>  <https://ja.wikipedia.org/wiki/MIT_License>
 
 
 ## Author

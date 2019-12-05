@@ -5,17 +5,17 @@
             <url>vUSBMSC.c</url>
             <bookmark id="34">
                 <name/>
-                <line>331</line>
+                <line>316</line>
                 <key/>
             </bookmark>
             <bookmark id="32">
                 <name/>
-                <line>368</line>
+                <line>353</line>
                 <key/>
             </bookmark>
             <bookmark id="31">
                 <name/>
-                <line>391</line>
+                <line>376</line>
                 <key/>
             </bookmark>
         </file>
@@ -23,7 +23,7 @@
             <url>vSCSI.c</url>
             <bookmark id="36">
                 <name/>
-                <line>435</line>
+                <line>434</line>
                 <key/>
             </bookmark>
         </file>
@@ -31,17 +31,22 @@
             <url>vUSBMSC.h</url>
             <bookmark id="37">
                 <name/>
-                <line>155</line>
+                <line>153</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vTMR1.c</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/ff.h</file>
             <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/v.h</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/uart_pic24f.c</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.h</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.h</file>
             <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/main.c</file>
             <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.c</file>
+            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/ff.c</file>
         </group>
     </open-files>
 </project-private>

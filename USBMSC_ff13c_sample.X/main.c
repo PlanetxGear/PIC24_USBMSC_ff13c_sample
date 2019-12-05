@@ -326,8 +326,12 @@ void ff13_main (void)
 				f_closedir(&dir);
 				break;
 #endif
-			case 'o' :	/* fo <mode> <file> - Open a file */
-				if (!xatoi(&ptr, &p1)) break;
+                case 'o' :	/* fo <mode> <file> - Open a file / mode 1:read, 2:write*/
+				if (!xatoi(&ptr, &p1)) 
+                {
+                    xputs("MODE_ERROR\n");  
+                    break;
+                }
 				while (*ptr == ' ') ptr++;
 				put_rc(f_open(&File[0], ptr, (BYTE)p1));
 				break;

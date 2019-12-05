@@ -53,9 +53,8 @@ enum eUSB_STATE {
 
 // IDLE or END or wait next data.
     eUSB_IDLE,
-//    eUSB_END,
 
-// Errors. you should initilize USB status.
+// Errors. you should initialize USB status.
     eUSB_ERRORS,
         eUSB_ERR_NODEVICE,
         eUSB_ERR_TIMEOUT,
@@ -141,7 +140,6 @@ typedef struct __USB_CONDITION
 	UINT16	IsAttach;       //Attache flag. 1:attach 0:detach
 	UINT16	SOFCount;       // SOF freame counter
 	UINT16	SOFCountEx;     // Ex SOF freame counter (prior counter value)
-//	UINT16	U1IRsave;       // U1IR register save
 	UINT16	BDpid;          // BD PID save
 	UINT16	BDbyteCount;    // BD transfar byte count save
 #ifdef _V_DEBUG_SCSI2

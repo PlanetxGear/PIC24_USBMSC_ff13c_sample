@@ -45,14 +45,13 @@ enum eSCSI_STATE {
 	
 // IDLE or END or WAIT next data.
 	eSCSI_IDLE,
-//	eSCSI_END,
 
-// Errors. you should initilize USB status.
+// Errors. you should initialize USB status.
     eSCSI_ERRORS,
         eSCSI_ERR_dataSize, //data size error
         eSCSI_ERR_signature,//signature error
         eSCSI_ERR_ANY,      //some error (01 cmd err 02 phase error)
-        eSCSI_ERR_NOT_INITIALIZED,   //USB isn't initilized
+        eSCSI_ERR_NOT_INITIALIZED,   //USB isn't initialized
         eSCSI_ERR_END,
         
 // when it happened, this code has bug.        
@@ -73,7 +72,6 @@ typedef struct __SCSI_CONDITION
 	enum eSCSI_COMMAND		Command;
 	enum eSCSI_STATE        ErrorCode;
     UINT32					MscTotal;		// SCSI final sector number
-//    INT16					DataLength;		// transmission data length
     UINT32					DataLength;		// transmission data length
     UINT8*					UsbBuffAddr;	// transmission data buffer address
 } SCSI_CONDITION;
@@ -90,7 +88,6 @@ extern SCSI_CONDITION SCSIcondition;
  *****************************/
 void SCSI_init(void);
 void SCSI_statusControl(void);
-//void SCSI_command_go(void);
 
 void SCSI_requestSense(
 UINT8* 	buffAddr	// transmission data buffer address

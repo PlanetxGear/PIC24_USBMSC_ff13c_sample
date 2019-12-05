@@ -365,11 +365,11 @@
   @Example
     <code>
     // Set RB10 high (1)
-    IO_RB10_SetHigh();
+    USB_DMINUS_SetHigh();
     </code>
 
 */
-#define IO_RB10_SetHigh()          _LATB10 = 1
+#define USB_DMINUS_SetHigh()          _LATB10 = 1
 /**
   @Summary
     Sets the GPIO pin, RB10, low using LATB10.
@@ -389,11 +389,11 @@
   @Example
     <code>
     // Set RB10 low (0)
-    IO_RB10_SetLow();
+    USB_DMINUS_SetLow();
     </code>
 
 */
-#define IO_RB10_SetLow()           _LATB10 = 0
+#define USB_DMINUS_SetLow()           _LATB10 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB10, using LATB10.
@@ -413,11 +413,11 @@
   @Example
     <code>
     // Toggle RB10
-    IO_RB10_Toggle();
+    USB_DMINUS_Toggle();
     </code>
 
 */
-#define IO_RB10_Toggle()           _LATB10 ^= 1
+#define USB_DMINUS_Toggle()           _LATB10 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB10.
@@ -439,11 +439,11 @@
     uint16_t portValue;
 
     // Read RB10
-    postValue = IO_RB10_GetValue();
+    postValue = USB_DMINUS_GetValue();
     </code>
 
 */
-#define IO_RB10_GetValue()         _RB10
+#define USB_DMINUS_GetValue()         _RB10
 /**
   @Summary
     Configures the GPIO pin, RB10, as an input.
@@ -463,11 +463,11 @@
   @Example
     <code>
     // Sets the RB10 as an input
-    IO_RB10_SetDigitalInput();
+    USB_DMINUS_SetDigitalInput();
     </code>
 
 */
-#define IO_RB10_SetDigitalInput()  _TRISB10 = 1
+#define USB_DMINUS_SetDigitalInput()  _TRISB10 = 1
 /**
   @Summary
     Configures the GPIO pin, RB10, as an output.
@@ -487,11 +487,11 @@
   @Example
     <code>
     // Sets the RB10 as an output
-    IO_RB10_SetDigitalOutput();
+    USB_DMINUS_SetDigitalOutput();
     </code>
 
 */
-#define IO_RB10_SetDigitalOutput() _TRISB10 = 0
+#define USB_DMINUS_SetDigitalOutput() _TRISB10 = 0
 /**
   @Summary
     Sets the GPIO pin, RB11, high using LATB11.
@@ -511,11 +511,11 @@
   @Example
     <code>
     // Set RB11 high (1)
-    IO_RB11_SetHigh();
+    USB_DPLUS_SetHigh();
     </code>
 
 */
-#define IO_RB11_SetHigh()          _LATB11 = 1
+#define USB_DPLUS_SetHigh()          _LATB11 = 1
 /**
   @Summary
     Sets the GPIO pin, RB11, low using LATB11.
@@ -535,11 +535,11 @@
   @Example
     <code>
     // Set RB11 low (0)
-    IO_RB11_SetLow();
+    USB_DPLUS_SetLow();
     </code>
 
 */
-#define IO_RB11_SetLow()           _LATB11 = 0
+#define USB_DPLUS_SetLow()           _LATB11 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB11, using LATB11.
@@ -559,11 +559,11 @@
   @Example
     <code>
     // Toggle RB11
-    IO_RB11_Toggle();
+    USB_DPLUS_Toggle();
     </code>
 
 */
-#define IO_RB11_Toggle()           _LATB11 ^= 1
+#define USB_DPLUS_Toggle()           _LATB11 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB11.
@@ -585,11 +585,11 @@
     uint16_t portValue;
 
     // Read RB11
-    postValue = IO_RB11_GetValue();
+    postValue = USB_DPLUS_GetValue();
     </code>
 
 */
-#define IO_RB11_GetValue()         _RB11
+#define USB_DPLUS_GetValue()         _RB11
 /**
   @Summary
     Configures the GPIO pin, RB11, as an input.
@@ -609,11 +609,11 @@
   @Example
     <code>
     // Sets the RB11 as an input
-    IO_RB11_SetDigitalInput();
+    USB_DPLUS_SetDigitalInput();
     </code>
 
 */
-#define IO_RB11_SetDigitalInput()  _TRISB11 = 1
+#define USB_DPLUS_SetDigitalInput()  _TRISB11 = 1
 /**
   @Summary
     Configures the GPIO pin, RB11, as an output.
@@ -633,11 +633,11 @@
   @Example
     <code>
     // Sets the RB11 as an output
-    IO_RB11_SetDigitalOutput();
+    USB_DPLUS_SetDigitalOutput();
     </code>
 
 */
-#define IO_RB11_SetDigitalOutput() _TRISB11 = 0
+#define USB_DPLUS_SetDigitalOutput() _TRISB11 = 0
 /**
   @Summary
     Sets the GPIO pin, RB13, high using LATB13.
