@@ -536,14 +536,6 @@ Wire Wire Line
 Wire Wire Line
 	7950 4750 8700 4750
 Wire Wire Line
-	8700 4750 8700 5050
-Wire Wire Line
-	8700 5050 8900 5050
-Wire Wire Line
-	8900 5200 8650 5200
-Wire Wire Line
-	8650 5200 8650 4850
-Wire Wire Line
 	8650 4850 7950 4850
 Wire Wire Line
 	8500 3900 8500 3950
@@ -565,4 +557,14 @@ NoConn ~ 7950 3650
 NoConn ~ 7950 3550
 NoConn ~ 9250 4550
 NoConn ~ 9350 4550
+Wire Wire Line
+	8700 5200 8900 5200
+Wire Wire Line
+	8700 4750 8700 5200
+Wire Wire Line
+	8650 4850 8650 5050
+Wire Wire Line
+	8650 5050 8900 5050
+Text Notes 8450 5550 0    60   ~ 0
+(RB8)RX - TX(AE-FT234X)\n(RB9)TX - RX(AE-FT234X)
 $EndSCHEMATC

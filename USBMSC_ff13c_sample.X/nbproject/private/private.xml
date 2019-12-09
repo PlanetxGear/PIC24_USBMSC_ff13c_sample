@@ -37,16 +37,6 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vTMR1.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/ff.h</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/uart_pic24f.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.h</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vUSBMSC.h</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/main.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/vSCSI.c</file>
-            <file>file:/D:/Temp/20191031_USBMSC_ff13c_sample/USBMSC_ff13c_sample.X/ff.c</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
